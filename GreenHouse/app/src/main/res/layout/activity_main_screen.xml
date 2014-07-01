@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/vubdarkgray"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainScreen"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/activity_vertical_margin">
+
+    <ImageButton
+        android:layout_width="150dip" android:layout_height="150dip"
+        android:id="@+id/chartsbutton"
+        android:background="@drawable/history"
+        android:onClick="showCharts"
+        android:layout_weight="1"
+        android:contentDescription="Button" />
+    <ImageButton
+        android:layout_width="150dip" android:layout_height="150dip"
+        android:id="@+id/statusbutton"
+        android:onClick="ShowCurrentStatus"
+        android:background="@drawable/current"
+        android:layout_weight="1"
+        android:contentDescription="Button" />
+    <ImageButton
+        android:layout_width="150dip" android:layout_height="150dip"
+        android:id="@+id/consumptionbutton"
+        android:onClick="showPredictions"
+        android:background="@drawable/savings"
+        android:layout_weight="1"
+        android:maxHeight="100dip"
+        android:maxWidth="100dip"
+        android:minHeight="100dip"
+        android:contentDescription="Button" />
+
+</LinearLayout>
+</LinearLayout>

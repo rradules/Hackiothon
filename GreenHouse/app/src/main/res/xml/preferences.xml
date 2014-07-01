@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Optimal Temperature"
+        android:key="opt_temp"
+        android:summary="Please provide desired temperature"/>
+
+    <EditTextPreference android:title="Optimal Brightness"
+        android:key="opt_bright"
+        android:summary="Please provide desired brightness"/>
+
+    <EditTextPreference android:title="Temperature Weight (implies brightness weight)"
+        android:key="t_weight"
+        android:summary="Assign a value between 1 and 0 as the priority to which the algorithm should optimize."/>
+
+    <EditTextPreference android:title="Budget Per 5 Days"
+        android:key="budget"
+        android:summary="Please provide desired brightness"/>
+
+    <EditTextPreference android:title="Heater capacity"
+        android:key="max_heat"
+        android:summary="Please provide how many degrees the heater can increase in an hour"/>
+
+    <EditTextPreference android:title="Lighting capacity"
+        android:key="max_light"
+        android:summary="Please provide how many lumen all your lamps produce."/>
+
+</PreferenceScreen>

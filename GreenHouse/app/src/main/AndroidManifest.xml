@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hackathon.greenhouse" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/vub"
+        android:label="VUB Greenhouse"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainScreen"
+            android:label="VUB Greenhouse" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".history.SlidingGraphs"
+            android:label="VUB Greenhouse - Charts"
+            android:parentActivityName=".MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity
+            android:name=".currentdata.CurrentData"
+            android:label="VUB Greenhouse - Now"
+            android:parentActivityName=".MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity
+            android:name=".preferences.AppPreferences"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="hackathon.greenhouse.MainScreen" />
+        </activity>
+        <activity
+            android:name=".predictions.Predictions"
+            android:label="@string/title_activity_predictions" >
+        </activity>
+    </application>
+
+</manifest>

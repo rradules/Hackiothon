@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/vubdark"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/tempLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="5"
+                android:paddingRight="30dp"
+                android:text="Co2"
+                android:shadowRadius="2"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:typeface="sans"
+                android:textSize="40dp"
+                android:textColor="@color/vubgreen"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <gauge.GaugeView
+                android:id="@+id/gauge_view1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+                gauge:innerRimWidth="0"
+                gauge:outerBorderWidth="0"
+                gauge:rangeColors="@array/rangeColors"
+
+                gauge:subdivisions="4"
+                gauge:divisions="180"
+
+                gauge:rangeValues="@array/ranges1"
+                gauge:scaleEndValue="800"
+                gauge:scaleStartValue="0"
+                gauge:showInnerRim="true"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/humidityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="5"
+                android:text="Temp"
+                android:shadowRadius="2"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:typeface="sans"
+                android:textSize="40dp"
+                android:textColor="@color/vubgreen"
+                android:paddingRight="50dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:capitalize="words" />
+
+            <gauge.GaugeView
+                android:id="@+id/gauge_view2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+                gauge:innerRimWidth="0"
+                gauge:outerBorderWidth="0"
+                gauge:rangeColors="@array/rangeColors"
+
+                gauge:subdivisions="4"
+                gauge:divisions="8"
+
+                gauge:rangeValues="@array/ranges2"
+                gauge:scaleEndValue="60.0"
+                gauge:scaleStartValue="0"
+                gauge:showInnerRim="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/co2label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="5"
+                android:text="Humidity"
+                android:shadowRadius="2"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="4"
+                android:typeface="sans"
+                android:textSize="40dp"
+                android:textColor="@color/vubgreen"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <gauge.GaugeView
+                android:id="@+id/gauge_view3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+
+                gauge:innerRimWidth="0"
+                gauge:outerBorderWidth="0"
+                gauge:rangeColors="@array/rangeColors"
+
+                gauge:subdivisions="1"
+                gauge:divisions="40"
+
+                gauge:rangeValues="@array/ranges2"
+                gauge:scaleEndValue="100"
+                gauge:scaleStartValue="0"
+                gauge:showInnerRim="true"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</ScrollView>
